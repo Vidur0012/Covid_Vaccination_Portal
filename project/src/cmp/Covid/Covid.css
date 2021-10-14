@@ -1,0 +1,86 @@
+.card{
+    width:400px;
+    border: 1px solid #dddfe2;
+    box-shadow:0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 0.001rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card_name{
+    font-size: 32px;
+    line-height: 0.9;
+    font-weight: 700;
+}
+
+.card_name > span{
+    font-size: 14px;
+}
+
+.card_inner {
+    height: 200px;
+}
+
+.card_main_blue{
+    background:rgba(105, 95, 245, 0.534);
+}
+
+.card_total{
+    font-size: 30px;
+}
+ 
+
+.card_main_red{
+    background:rgba(253, 3, 3, 0.534);
+}
+
+.card_main_yellow{
+    background:rgba(202, 238, 39, 0.534);
+}
+
+.card_main_green{
+    background:rgba(19, 163, 26, 0.534);
+}
+
+.card_main_brown{
+    background:rgba(211, 111, 94, 0.534);
+}
+
+.card_main_darkblue{
+    background:rgba(20, 3, 253, 0.534);
+}
+
+ /* next */
+ .covidData {
+    background-color: green;
+    width: 30%;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 6px;
+    padding: 100px;
+    margin-top: 10%;
+  }
+
+ .covidData__input input {
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .covidData__input button {
+    width: 70px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 5px rgb(71, 67, 67);
+    cursor: pointer;
+  }
