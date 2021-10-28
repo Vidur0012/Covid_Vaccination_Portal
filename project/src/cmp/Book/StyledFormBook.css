@@ -1,30 +1,28 @@
-.Login{
-    width:400px;
+.StyledForm{
+    width:500px;
     background:#fff;
     border: 1px solid #dddfe2;
     box-shadow:0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     border-radius: 8px;
-    padding: 1rem;
     align-items: center;
     text-align: center;
-    margin-top: 10%;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
-.Login > input{
+.StyledForm > input{
     border-radius: 8px;
     border: 2px solid #dddfe2;
     outline: none;
     color: #1d2129;
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
     padding:0.5rem 0.75rem ;
     width:92%;
     font-size: 1rem;
 }
 
-.Login > button{
+.StyledForm > button{
     background:#1877f2;
     border: 1px solid #1877f2;
     color: #fff;
@@ -34,4 +32,27 @@
     border-radius: 8px;
     outline: none;
     cursor: pointer;
+}
+
+.lab {
+    display: inline;
+    font-size: larger;
+    position:relative;
+    margin-left :0;
+}
+
+.insider{
+    align-items: left;
+}
+
+
+.insider > input.rad{
+    display: inline;
+    margin :0;
+    width:10%;
+}
+
+.pre-detail >p{
+    font-size: medium;
+    color:darkcyan;
 }

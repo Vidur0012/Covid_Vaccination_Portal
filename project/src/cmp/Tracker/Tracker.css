@@ -1,3 +1,30 @@
+/* .Homepage{
+    max-width:400px;
+    background:#fff;
+    border: 1px solid #dddfe2;
+    box-shadow:0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Homepage > button{
+    background:#177bfd;
+    border: 1px solid #1877f2;
+    color: rgb(255, 255, 255);
+    font-size: 1.25rem;
+    padding:0.5rem ;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+} */
+
 .card{
     width:400px;
     border: 1px solid #dddfe2;
@@ -6,7 +33,7 @@
     padding: 0.001rem;
     align-items: center;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
@@ -54,25 +81,24 @@
     background:rgba(20, 3, 253, 0.534);
 }
 
- /* next */
- .covidData {
+.covidData {
     background-color: green;
-    width: 30%;
+    width: 40%;
     margin: auto;
     margin-top: 15px;
     border-radius: 6px;
     padding: 100px;
-    margin-top: 10%;
+    margin-top: 5%;
   }
 
- .covidData__input input {
-    width: 400px;
+.covidData__input input {
+    max-width: 400px;
     height: 30px;
     text-align: center;
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  .covidData__input button {
+.covidData__input button {
     width: 70px;
     height: 40px;
     margin-top: 10px;

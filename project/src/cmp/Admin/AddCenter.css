@@ -1,5 +1,5 @@
-.Register{
-    width:400px;
+.AddCenter{
+    width:900px;
     background:#fff;
     border: 1px solid #dddfe2;
     box-shadow:0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
@@ -7,24 +7,25 @@
     padding: 1rem;
     align-items: center;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 2%;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
-.Register > input{
+.AddCenter > input{
     border-radius: 8px;
+    display: inline;
     border: 2px solid #dddfe2;
     outline: none;
     color: #1d2129;
-    margin: 0.5rem 0;
+    margin: 0.7rem 0.9rem;
     padding:0.5rem 0.75rem ;
-    width:92%;
+    width:40%;
     font-size: 1rem;
 }
 
-.Register > button{
+.AddCenter > button{
     background:#1877f2;
     border: 1px solid #1877f2;
     color: #fff;
