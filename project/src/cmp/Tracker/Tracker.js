@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import  './Tracker.css'
+import './Tracker.css'
 
 
 function Tracker() {
     const [data, setData] = useState([])
     const [submit, setSubmit] = useState("false")
     const [userInput, setUserInput] = useState('')
- 
+
     useEffect(() => {
         setSubmit("false")
         setData('');
@@ -14,7 +14,7 @@ function Tracker() {
 
 
 
-async function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
         const url = userInput === ''
             ? ''
@@ -26,13 +26,13 @@ async function handleSubmit(e) {
         var resp = await result.json()
         setData(resp)
     }
-    
+
     return (
         <div>
 
             <div className="covidData">
                 <h1>Live</h1>
-                <h2>COVID-19 CORONAVIRUS TRACKER COUNTRY WISE</h2><br /><br />
+                <h2>COVID-19 TRACKER</h2>
                 <div className="covidData__input">
                     <form onSubmit={handleSubmit}>
                         {/* input county name */}
@@ -44,70 +44,90 @@ async function handleSubmit(e) {
             </div>
 
             {
-                userInput !== ''  && submit === "true"
-                    ?data.country?
-                    <section>
-                        <ul>
-                            <li className="card">
-                                <div className="card_main_blue">
-                                    <div className="card_inner">
-                                        <p className="card_name"><span> OUR </span> COUNTRY</p>
+                userInput !== '' && submit === "true"
+                    ? data.country ?
+                        <section className="covidData__live">
+                            <ul>
+                                <li className="card">
+                                    <div className="card_main_blue card__main">
+                                        <div class="icon gradient-7">
+                                            <i class="fas fa-globe-asia"></i>
+                                        </div>
+                                        <div className="card_inner">
+                                            
                                         <p className="card_total">{data.country}</p>
+                                            <p className="card_name"><span> OUR </span> COUNTRY</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
-                            <li className="card">
-                                <div className="card_main_green">
-                                    <div className="card_inner">
-                                        <p className="card_name"><span> TOTAL </span> RECOVERED</p>
+                                <li className="card">
+                                    <div className="card_main_green card__main">
+                                        <div class="icon gradient-4">
+                                            <i class="fas fa-child"></i>
+                                        </div>
+                                        <div className="card_inner">
+                                            
                                         <p className="card_total">{data.recovered}</p>
+                                            <p className="card_name"><span> TOTAL </span> RECOVERED</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
-                            <li className="card">
-                                <div className="card_main_yellow">
-                                    <div className="card_inner">
-                                        <p className="card_name"><span> TOTAL </span> ACTIVE</p>
-                                        <p className="card_total">{data.active}</p>
+                                <li className="card">
+                                    <div className="card_main_yellow card__main">
+                                        <div class="icon gradient-12">
+                                            <i class="fas fa-bed"></i>
+                                        </div>
+                                        <div className="card_inner">
+                                            <p className="card_total">{data.active}</p>                                            
+                                            <p className="card_name"><span> TOTAL </span> ACTIVE</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
-                            <li className="card">
-                                <div className="card_main_red">
-                                    <div className="card_inner">
-                                        <p className="card_name"><span> TOTAL </span> DEATH</p>
-                                        <p className="card_total">{data.deaths}</p>
+                                <li className="card">
+                                    <div className="card_main_red card__main">
+                                        <div class="icon gradient-9">
+                                            <i class="fas fa-procedures"></i>
+                                        </div>
+                                        <div className="card_inner">
+                                            <p className="card_total">{data.deaths}</p>                                            
+                                            <p className="card_name"><span> TOTAL </span> DEATH</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
-                            <li className="card">
-                                <div className="card_main_darkblue">
-                                    <div className="card_inner">
-                                        <p className="card_name"><span> TOTAL </span> CASES</p>
-                                        <p className="card_total">{data.cases}</p>
+                                <li className="card">
+                                    <div className="card_main_darkblue card__main">
+                                        <div class="icon gradient-1">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div className="card_inner">
+                                            <p className="card_total">{data.cases}</p>                                            
+                                            <p className="card_name"><span> TOTAL </span> CASES</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
-                            <li className="card">
-                                <div className="card_main_brown">
-                                    <div className="card_inner">
-                                        <p className="card_name"><span> LAST </span> UPDATED</p>
-                                        <p className="card_total">{data.updated}</p>
+                                <li className="card">
+                                    <div className="card_main_brown card__main">
+                                        <div class="icon gradient-3">
+                                            <i class="fas fa-bell"></i>
+                                        </div>
+                                        <div className="card_inner">
+                                            <p className="card_total">{data.updated}</p>                                            
+                                            <p className="card_name"><span> LAST </span> UPDATED</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
 
-                        </ul>
-                    </section>
-                    : <p>{data.message}</p>:''
+                            </ul>
+                        </section>
+                        : <p>{data.message}</p> : ''
             }
-            <br/>
+            <br />
         </div>
 
     )

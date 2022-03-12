@@ -26,13 +26,18 @@
 }
 
 .AddCenter > button{
-    background:#1877f2;
-    border: 1px solid #1877f2;
+    background:#017e7e;
+    border: 1px solid #017e7e;
     color: #fff;
     font-size: 1.25rem;
-    padding:0.5rem ;
+    padding:0.5rem 2.5rem;
     margin: 0.5rem 0;
-    border-radius: 8px;
+    border-radius: 5px;
     outline: none;
     cursor: pointer;
+    transition: 0.5s;
+  }
+.AddCenter > button:hover{
+    background: transparent;
+    color: #017e7e;
 }

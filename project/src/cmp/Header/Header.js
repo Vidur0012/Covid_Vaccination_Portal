@@ -16,9 +16,9 @@ function Header({setAdm,setCnt}) {
 
     return (
         <div>
-            <Navbar bg="light" variant="light">
+            <Navbar>
                 <Container>
-                    <Navbar.Brand>Covid Portal</Navbar.Brand>
+                    <Navbar.Brand><Link to="/" >Covid Portal</Link></Navbar.Brand>
                     <Nav className="justify-content-end nav_bar_wrapper">
                         <Link to="/" >Home</Link>
                         {

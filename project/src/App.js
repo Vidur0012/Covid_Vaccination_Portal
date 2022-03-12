@@ -18,6 +18,7 @@ import AddAdmin from './cmp/Admin/AddAdmin';
 import CenterLogin from './cmp/Center/CenterLogin';
 import ListBeneficiariesD1 from './cmp/Center/ListBeneficiariesD1';
 import ListBeneficiariesD2 from './cmp/Center/ListBeneficiariesD2';
+import Footer from './cmp/Footer/Footer';
 
 
 
@@ -49,8 +50,9 @@ function App() {
                 <Route path='/search'><Search/></Route>
                 <Route path='/tracker'><Tracker/></Route>
             </Switch>
+            
       </Router>
-      
+      <Footer></Footer>
     </div>
   );
 }

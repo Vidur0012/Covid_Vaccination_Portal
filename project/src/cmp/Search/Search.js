@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import Centers from './Centers'
 import './StyledForm1.css'
 
@@ -8,15 +8,15 @@ function Search() {
     const [state, setState] = useState('');
     const [err, setErr] = useState('');
     const [centers, setCenters] = useState([]);
-    
+
     async function searchCenters(e) {
         e.preventDefault();
         if (district && state) {
-           
+
             var res = await fetch("http://localhost:9700/centers/getCenters", {
                 method: "POST",
                 headers: {
-                    "Accept":"application/json",
+                    "Accept": "application/json",
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
@@ -24,7 +24,7 @@ function Search() {
                     state: state
                 })
             })
-       
+
             res = await res.json();
 
 
@@ -49,7 +49,7 @@ function Search() {
 
 
     useEffect(() => {
-        
+
         setErr('');
         setCenters([]);
 
@@ -58,17 +58,16 @@ function Search() {
 
     return (
         <>
-
             <form className="StyledForm1" onSubmit={searchCenters} formEncType="multipart/form-data">
-                <input type="text" id="statenm" name="statenm" placeholder="State Name" onChange={(e) => setState(e.target.value)} required />
-                <input type="text" id="distnm" name="distnm"  placeholder="District Name" onChange={(e) => setDistrict(e.target.value)} required /><br/>
-                <button type="submit">&nbsp;Search&nbsp;</button>
+                <div className="StyledForm1__inner">
+                    <input type="text" id="statenm" name="statenm" placeholder="State Name" onChange={(e) => setState(e.target.value)} required />
+                    <input type="text" id="distnm" name="distnm" placeholder="District Name" onChange={(e) => setDistrict(e.target.value)} required />
+                </div>
+                <button type="submit">Search</button>
                 <p style={{ color: "red" }}><b>{err}</b></p>
 
             </form>
-            <br/>
-            <br/>
-            <br/>
+            <p></p>
             {
                 centers.length != 0
                     ? <Centers centers={centers} />
