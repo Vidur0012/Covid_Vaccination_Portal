@@ -5,7 +5,7 @@ import './Sucess.css';
 function Sucess({ beneficiarydata, center }) {
 
     return (
-        <Card style={{ width: '50rem' }}>
+        <center><Card style={{ width: '50rem' }}>
             <Card.Body>
                 <Card.Title ><h1>Sucessfully Booked...</h1></Card.Title>
                 <Card.Text>
@@ -15,6 +15,7 @@ function Sucess({ beneficiarydata, center }) {
                 </Card.Text>
             </Card.Body>
         </Card>
+        </center>
     )
 
 }
