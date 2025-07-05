@@ -1,2 +1,0 @@
-Addcenter.js
-localstorage.cleared from sucess.js
